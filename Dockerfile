@@ -1,0 +1,17 @@
+FROM ansibleplaybookbundle/apb-base
+
+LABEL "com.redhat.apb.version"="0.1.0"
+LABEL "com.redhat.apb.spec"=\
+"aWQ6IGMxM2E5YjJiLThmOTItNDg2NS05ZmQ3LTMzNjY5NTExZDQ5YwpuYW1lOiBuZ2lueC1vc3Mt\
+YXBiCmltYWdlOiBuZ2lueGluYy9uZ2lueC1vc3MtYXBiCmRlc2NyaXB0aW9uOiBUaGlzIGlzIGEg\
+c2ltcGxlIE5HSU5YIGluc3RhbmNlCmJpbmRhYmxlOiBGYWxzZQphc3luYzogb3B0aW9uYWwKbWV0\
+YWRhdGE6CiAgZG9jdW1lbnRhdGlvblVybDogaHR0cHM6Ly93d3cubmdpbnguY29tL3Jlc291cmNl\
+cy9hZG1pbi1ndWlkZS8KICBpbWFnZVVybDogaHR0cHM6Ly9hdmF0YXJzMi5naXRodWJ1c2VyY29u\
+dGVudC5jb20vdS84NjI5MDcyP3Y9NCZzPTIwMAogIGRlcGVuZGVuY2llczogWycvYmluL3NoOiAv\
+YmluL2dyZXA6IE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnknXQogIGRpc3BsYXlOYW1lOiBOR0lO\
+WAogIGxvbmdEZXNjcmlwdGlvbjogQW4gQVBCIHRoYXQgZGVwbG95cyBhbiBpbnN0YW5jZSBvZiBO\
+R0lOWAoKcGFyYW1ldGVyczogW10KCnJlcXVpcmVkOiBbXQo="
+
+COPY playbooks /opt/apb/actions
+COPY roles /opt/ansible/roles
+USER apb
