@@ -10,6 +10,8 @@ To test this APB you will first need to setup an OpenShift Origin environment wi
 
 You will also need to install the [APB application](https://github.com/fusor/ansible-playbook-bundle).
 
+Finally, you will need to build an OpenShift NGINX OSS image. A Dockerfile to build the image can be found in the `dev` folder.
+
 ## How to Use
 
 1. Login to your `oc` cluster via the command that [catasb](https://github.com/fusor/catasb) will output at the end of the installation process.
