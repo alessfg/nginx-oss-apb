@@ -29,7 +29,8 @@
       service: nginx-oss-apb
     containers:
     - env:
-      image: docker.io/library/nginx # replace with your application image
+      image: '{{ nginx-oss-image }}' # replace with your application image
+      imagePullPolicy: IfNotPresent
       name: nginx-oss-apb
       ports:
       - container_port: 80
