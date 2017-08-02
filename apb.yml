@@ -16,7 +16,7 @@ plans:
     free: True
     metadata: {}
     parameters:
-      - name: nginx-oss-image
+      - name: nginx_oss_image
         default: openshift-nginx
         type: string
         title: Name of NGINX OSS Docker image
