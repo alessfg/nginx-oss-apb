@@ -20,3 +20,4 @@ plans:
         default: openshift-nginx
         type: string
         title: Name of NGINX OSS Docker image
+        required: True
