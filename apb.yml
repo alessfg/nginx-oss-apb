@@ -1,20 +1,22 @@
 id: c13a9b2b-8f92-4865-9fd7-33669511d49c
 name: nginx-oss-apb
 image: nginxinc/nginx-oss-apb
-description: This is a simple NGINX instance
+description: An open source reverse proxy web server
 bindable: False
 async: optional
 metadata:
   documentationUrl: https://www.nginx.com/resources/admin-guide/
   imageUrl: https://avatars2.githubusercontent.com/u/8629072?v=4&s=200
   displayName: NGINX
-  longDescription: An APB that deploys an instance of NGINX
-
+  longDescription: Nginx (pronounced "engine-x") is an open source reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer, HTTP cache, and a web server (origin server). The nginx project started with a strong focus on high concurrency, high performance and low memory usage. It is licensed under the 2-clause BSD-like license and it runs on Linux, BSD variants, Mac OS X, Solaris, AIX, HP-UX, as well as on other *nix flavors. It also has a proof of concept port for Microsoft Windows.
 plans:
   - name: default
-    description: An APB which deploys NGINX
+    description: Default plan
     free: True
-    metadata: {}
+    metadata:
+      displayName: Default
+      longDescription: This plan deploys a simple NGINX web server
+      cost: $0.00
     parameters:
       - name: nginx_oss_image
         default: openshift-nginx
