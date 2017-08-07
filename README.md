@@ -30,10 +30,10 @@ nginx_oss_image | openshift-nginx | Yes | Name of NGINX OSS Docker image
 
 ## License
 
-Simplified BSD License
+[Simplified BSD License](https://github.com/nginxinc/nginx-oss-apb/blob/master/LICENSE)
 
 ## Author
 
 Alessandro Fael Garcia
 
-**NGINX Inc**
+[NGINX Inc](https://www.nginx.com/)
