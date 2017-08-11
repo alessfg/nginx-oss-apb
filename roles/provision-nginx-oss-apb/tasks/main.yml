@@ -1,5 +1,5 @@
 ##############################################################################
-## Provision nginx-oss-apb
+## Provision NGINX OSS APB
 ## This role executes much of the needed functionality to provision an
 ## application using an Ansible Playbook Bundle.  Included in the comments
 ## below are some sample resources for getting started deploying an application
@@ -94,10 +94,4 @@
 ## https://docs.openshift.com/enterprise/3.2/dev_guide/configmaps.html#configmaps-use-case-consuming-in-volumes
 ##############################################################################
 - name: Create NGINX configMap
-  shell: |
-    oc create configmap nginx-conf --from-file=nginx-conf=/tmp/default.conf
-  # oc_configmap:
-  #   namespace: '{{ namespace }}'
-  #   name: nginx-conf
-  #   from_file:
-  #     nginx-conf: /tmp/default.conf
+  shell: oc create configmap nginx-conf --from-file=nginx-conf=/tmp/default.conf
