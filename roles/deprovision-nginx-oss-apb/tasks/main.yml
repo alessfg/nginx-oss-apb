@@ -8,7 +8,8 @@
 ##############################################################################
 ## Deprovision a route
 ##############################################################################
-- openshift_v1_route:
+- name: Delete NGINX OSS APB route
+  openshift_v1_route:
     name: nginx-oss-apb
     namespace: '{{ namespace }}'
     state: absent
@@ -16,7 +17,8 @@
 ##############################################################################
 ## Deprovision a service
 ##############################################################################
-- k8s_v1_service:
+- name: Delete NGINX OSS APB service
+  k8s_v1_service:
     name: nginx-oss-apb
     namespace: '{{ namespace }}'
     state: absent
@@ -26,8 +28,8 @@
 ## When removing a Deployment Config, OpenShift will automatically clean up
 ## its associated resources like replication controllers and pods
 ##############################################################################
-## Delete the deployment config.
-- openshift_v1_deployment_config:
+- name: Delete NGINX OSS APB deployment config
+  openshift_v1_deployment_config:
     name: nginx-oss-apb
     namespace: '{{ namespace }}'
     state: absent
