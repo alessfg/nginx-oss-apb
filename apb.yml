@@ -26,13 +26,13 @@ plans:
       - name: lb
         default: false
         type: boolean
-        title: Proxy Servers
-        required: true
+        title: Enable Proxy Servers
       - name: server
+        default:
         type: string
         title: Proxy Servers (Input as a Comma Separated List)
       - name: lb_method
+        default: 'round_robin'
         type: enum
         enum: ['round_robin', 'least_conn', 'ip_hash']
-        default: 'round_robin'
         title: Load Balancing Algorithm
