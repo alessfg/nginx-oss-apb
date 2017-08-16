@@ -1,7 +1,7 @@
 {% if lb %}
 upstream upstr {
 {% if lb_method != 'round_robin' %}
-    {{ lb_method }};
+    {{ lb_method }}{{ ' $request_uri' if lb_method == 'hash' }};
 {% endif %}
 {% set list = server.split(', ') %}
 {% for ip in list %}
