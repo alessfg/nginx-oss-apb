@@ -10,7 +10,7 @@ To test this APB you will first need to setup an OpenShift Origin environment wi
 
 You will also need to install the [APB application](https://github.com/fusor/ansible-playbook-bundle).
 
-## How to Install ann Test the NGINX OSS Service
+## How to Install and Test the NGINX OSS Service
 
 1. Login to your `oc` cluster via the command that [catasb](https://github.com/fusor/catasb) will output at the end of the installation process.
 2. Clone the NGINX OSS APB repository (this repository).
