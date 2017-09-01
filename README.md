@@ -2,13 +2,15 @@
 
 An Ansible Playbook Bundle (APB) for deploying a single instance of NGINX OSS.
 
+This APB is now also included as part of a default [`catasb`](https://github.com/fusor/catasb) if you set `dockerhub_org_name: ansibleplaybookbundle` in `config/my_vars.yml`.
+
 **Please Note**: This is still a WIP. Any upstream changes might break the APB without previous warning.
 
 ## Development Environment Setup
 
 To test this APB you will first need to setup an OpenShift Origin environment with a Service Catalog and Ansible Service Broker. [Catasb](https://github.com/fusor/catasb) is a collection of playbooks to create an OpenShift environment with a Service Catalog & Ansible Service Broker in a local or EC-2 environment and will allow you to create an OpenShift Docker cluster on any machine and install all the required dependencies.
 
-As part of setting up `catasb` you will need to set some additional parameters on `config/my_vars.yml` to allow the NGINX OSS APB to function properly:
+As part of setting up `catasb` you will need to set some additional parameters in `config/my_vars.yml` to allow the NGINX OSS APB to function properly:
 * broker_enable_basic_auth: false
 * broker_bootstrap_refresh_interval: 86400s
 
@@ -22,6 +24,7 @@ You will also need to install the [APB application](https://github.com/fusor/ans
 4. Run `apb push`.
 5. Open your browser at https://192.168.37.1:8443. You'll be greeted by the OpenShift service catalog.
 6. Select the NGINX service, add it to `My Project`, select `Create` and click `View Project`.
+    * Do not enable load balancing at this stage or your deployment will fail.
 7. After waiting for a few seconds you should see a URL pop in the top-right corner of the project overview GUI. That URL will take you to the default NGINX landing page.
 
 ## Sample Tutorial Walkthrough
@@ -36,7 +39,7 @@ You will also need to install the [APB application](https://github.com/fusor/ans
 Name | Default Value | Required | Description
 ---|---|---|---
 lb | false | No | Enable Load Balancing
-server | - | No | Load Balanced Servers (Input as a Comma Separated List and Add Port 8080)
+server | - | No | Load Balanced Servers (Input as a Comma Separated List)
 lb_method | round_robin | No | Load Balancing Algorithm
 
 
