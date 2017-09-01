@@ -19,9 +19,8 @@ plans:
         type: boolean
         title: Enable Load Balancing
       - name: server
-        default:
         type: string
-        title: Load Balanced Servers (Input as a Comma Separated List and Add Port 8080)
+        title: Load Balanced Servers (Input as a Comma Separated List)
       - name: lb_method
         default: 'round_robin'
         type: enum
