@@ -8,9 +8,9 @@ This APB is now also included as part of a default [`catasb`](https://github.com
 
 ## Development Environment Setup
 
-To test this APB you will first need to setup an OpenShift Origin environment with a Service Catalog and Ansible Service Broker. [Catasb](https://github.com/fusor/catasb) is a collection of playbooks to create an OpenShift environment with a Service Catalog & Ansible Service Broker in a local or EC-2 environment and will allow you to create an OpenShift Docker cluster on any machine and install all the required dependencies.
+To test this APB you will first need to setup an OpenShift Origin environment with a Service Catalog and Ansible Service Broker. [`catasb`](https://github.com/fusor/catasb) is a collection of playbooks to create an OpenShift environment with a Service Catalog & Ansible Service Broker in a local or EC-2 environment and will allow you to create an OpenShift Docker cluster on any machine and install all the required dependencies.
 
-As part of setting up `catasb` you will need to set some additional parameters in `config/my_vars.yml` to allow the NGINX OSS APB to function properly:
+As part of setting up [`catasb`](https://github.com/fusor/catasb) you will need to set some additional parameters in `config/my_vars.yml` to allow the NGINX OSS APB to function properly:
 * broker_enable_basic_auth: false
 * broker_bootstrap_refresh_interval: 86400s
 
