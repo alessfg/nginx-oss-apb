@@ -1,6 +1,6 @@
 # Ansible Playbook Bundle for NGINX OSS
 
-An Ansible Playbook Bundle (APB) for deploying a single instance of NGINX OSS.
+An Ansible Playbook Bundle (APB) for deploying a single instance of NGINX OSS in the OpenShift Service Catalog.
 
 This APB is now also included as part of a default [`catasb`](https://github.com/fusor/catasb) if you set `dockerhub_org_name: ansibleplaybookbundle` in `config/my_vars.yml`.
 
